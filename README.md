@@ -39,7 +39,7 @@ Here is a list of things you can do with pliers.
     - Remove duplicate elements from the array and make it unique
     - `[1, 2, 1, 2, 2, 3, 1, 2, 3]` => `[1, 2, 3]`
 - **`Pliers.compact(arr)`**
-    - Remove falsy values ​​from the arr 
+    - Remove falsy values from the arr 
     - falsy values like => `[0, -0, false, "" (empty string), NaN, undefined, null]`
 - **`Pliers.reverse(arr)`**
     - reverse the arr => `[1, 2, 3]` => `[3, 2, 1]`
@@ -47,7 +47,7 @@ Here is a list of things you can do with pliers.
 
 ## How to use
 
-[clone or download](https://https://github.com/nullcript/pliers) the file then
+[clone or download](https://github.com/nullcript/pliers) the file then
 put the file in your project depends your environment  **(Node / Browser)**
 then :
 
