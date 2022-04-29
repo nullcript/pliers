@@ -20,21 +20,21 @@ Here is a list of things you can do with pliers.
 - **`Pliers.random(min, max)`**
     - Returns a random number between and includes the minimum and maximum numbers
 - **`Pliers.search(arr, target)`**
-    - Returns the index of target in the arr
+    - Returns the index of target in the arr otherwise `-1`
 - **`Pliers.includes(arr, target)`**
     - Returns true if find the target in the arr
-- **`Pliers.sortNumber(arr)`**
-    - Sorts arr based on numeric content => `[1, 2, 3]`
-- **`Pliers.sortString(arr)`**
-    - Sorts arr based on textual content => `["a", "A", "b", "C"]`
-    - It's Case Sensitive sort : `"a" < "A"`
-- **`Pliers.sortBoth(arr)`**
-    - Sorts arrays based on textual content with numeric end
-    - ‍‍‍‍‍`["file1","file9","file10","file11"]`
+- **`Pliers.sort(arr)`**
+    - Sorts arr based on textual or numeric content
+    - It's Case Sensitive sort in textual mod : `"a" < "A"`
+- **`Pliers.sortMix(arr)`**
+    - Sorts arr based on textual content with numeric end
+    - `["file1","file9","file10","file11"]`
 - **`Pliers.shuffle(arr)`**
     - Shuffles the array based on the **FisherYates** algorithm
 - **`Pliers.sample(arr, n)`**
-    - Random selection of n sample of arr
+    - Random selection of n sample of arr without repeat 
+    - [default n == 1] and [if n > arr.length => n = arr.length]
+    - [if n == 1] return value else return an array of values
 - **`Pliers.union(arr)`**
     - Remove duplicate elements from the array and make it unique
     - `[1, 2, 1, 2, 2, 3, 1, 2, 3]` => `[1, 2, 3]`
