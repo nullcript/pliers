@@ -61,7 +61,7 @@ class Pliers {
     //(04) => Pliers.sortNumber(arr)
     static sort(arr) {
         return arr.sort((a, b) => {
-            if (typeof a === "number" || typeof b === "number") {
+            if (typeof a === "number" && typeof b === "number") {
                 return a - b;
             } else {
                 return a.localeCompare(b);
