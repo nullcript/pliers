@@ -94,7 +94,7 @@ If you do not want to use the modules in the browser, you can use the project as
 
 ## One note about the project file
 
-if you use **Node.js** you should use this **export** code.  
+if you use **Node.js** you should use this **module.exports** code.  
 Get it from the comment
 
 ```javascript
