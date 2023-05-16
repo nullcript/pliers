@@ -43,6 +43,8 @@ Here is a list of things you can do with pliers.
     - falsy values like => `[0, -0, false, "" (empty string), NaN, undefined, null]`
 - **`Pliers.reverse(arr)`**
     - reverse the arr => `[1, 2, 3]` => `[3, 2, 1]`
+- **`Pliers.deepClone(obj)`**
+    - deepClone an object => `const target = Pliers.deepClone(obj)`
 
 
 ## How to use

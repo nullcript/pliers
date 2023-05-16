@@ -2,34 +2,35 @@
 
 // ***************| Information
 /*
-*
-* 'Pliers.js' ::=> A simple and integrated library of commonly used methods for JavaScript
-* 'Author' ::=> @MohammadShokri [https://Nullcript.ir]
-* 'License' ::=> FREE
-* 'Links' ::=>
-*   ==> email : [nullcript@gmail.com],
-*   ==> github : [https://github.com/nullcript],
-*   ==> website : [https://nullcript.ir],
-*   ==> Linkedin : [https://linkedin.com/in/nullcript],
-*   ==> twitter : [https://twitter.com/nullcript],
-*
-* */
+ *
+ * 'Pliers.js' ::=> A simple and integrated library of commonly used methods for JavaScript
+ * 'Author' ::=> @MohammadShokri [https://Nullcript.ir]
+ * 'License' ::=> FREE
+ * 'Links' ::=>
+ *   ==> email : [nullcript@gmail.com],
+ *   ==> github : [https://github.com/nullcript],
+ *   ==> website : [https://nullcript.ir],
+ *   ==> Linkedin : [https://linkedin.com/in/nullcript],
+ *   ==> twitter : [https://twitter.com/nullcript],
+ *
+ * */
 
 // ***************| Features
 /*
-*
-* (01) => Pliers.random(min, max)
-* (02) => Pliers.search(arr, target)
-* (03) => Pliers.includes(arr, target)
-* (04) => Pliers.sort(arr)
-* (05) => Pliers.sortMix(arr)
-* (06) => Pliers.shuffle(arr)
-* (07) => Pliers.sample(arr, n)
-* (08) => Pliers.union(arr)
-* (09) => Pliers.compact(arr)
-* (10) => Pliers.reverse(arr)
-*
-* */
+ *
+ * (01) => Pliers.random(min, max)
+ * (02) => Pliers.search(arr, target)
+ * (03) => Pliers.includes(arr, target)
+ * (04) => Pliers.sort(arr)
+ * (05) => Pliers.sortMix(arr)
+ * (06) => Pliers.shuffle(arr)
+ * (07) => Pliers.sample(arr, n)
+ * (08) => Pliers.union(arr)
+ * (09) => Pliers.compact(arr)
+ * (10) => Pliers.reverse(arr)
+ * (11) => Pliers.deepClone(obj)
+ *
+ * */
 
 // ***************| Source Code
 "use strict";
@@ -39,7 +40,9 @@ class Pliers {
     constructor() {
         //Can not create an instance from this class
         if (new.target) {
-            throw new Error("You can not create an OBJECT from the 'pliers' CLASS with 'new' syntax");
+            throw new Error(
+                "You can not create an OBJECT from the 'pliers' CLASS with 'new' syntax"
+            );
         }
     }
 
@@ -72,7 +75,7 @@ class Pliers {
     //(05) => Pliers.sortMix(arr)
     static sortMix(arr) {
         const filenameOrder = new Intl.Collator(undefined, {
-            numeric: true
+            numeric: true,
         }).compare;
         return arr.sort(filenameOrder);
     }
@@ -89,7 +92,9 @@ class Pliers {
     //(07) => Pliers.sample(arr, n)
     static sample(arr, n = 1) {
         n = n > arr.length ? arr.length : n;
-        let choice = [], temp, count = 0;
+        let choice = [],
+            temp,
+            count = 0;
         while (true) {
             if (count === n) break;
             temp = arr[Math.floor(Math.random() * arr.length)];
@@ -121,13 +126,24 @@ class Pliers {
     static reverse(arr) {
         return arr.reverse();
     }
-}
 
+    //(11) => Pliers.deepClone(obj)
+    static deepClone(obj) {
+        let clone = {};
+        for (let i in obj) {
+            if (typeof obj[i] === "object") {
+                clone[i] = deepClone(obj[i]);
+            } else {
+                clone[i] = obj[i];
+            }
+        }
+        return clone;
+    }
+}
 
 // ***************| Exports Code
 //Uncomment one of the following codes based on your programming environment
 //Read 'README.md' file for more instruction
-
 
 //module.exports = Pliers;
 //export default Pliers;
