@@ -132,7 +132,7 @@ class Pliers {
         let clone = {};
         for (let i in obj) {
             if (typeof obj[i] === "object") {
-                clone[i] = deepClone(obj[i]);
+                clone[i] = Pliers.deepClone(obj[i]);
             } else {
                 clone[i] = obj[i];
             }
