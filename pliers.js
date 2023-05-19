@@ -29,6 +29,8 @@
  * (09) => Pliers.compact(arr)
  * (10) => Pliers.reverse(arr)
  * (11) => Pliers.deepClone(obj)
+ * (12) => Pliers.JTG(jy, jm, jd)
+ * (13) => Pliers.GTJ(gy, gm, gd)
  *
  * */
 
@@ -192,5 +194,5 @@ class Pliers {
 //Uncomment one of the following codes based on your programming environment
 //Read 'README.md' file for more instruction
 
-//module.exports = Pliers;
-//export default Pliers;
+// module.exports = Pliers;
+// export default Pliers;
