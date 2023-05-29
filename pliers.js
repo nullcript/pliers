@@ -31,6 +31,7 @@
  * (11) => Pliers.deepClone(obj)
  * (12) => Pliers.JTG(jy, jm, jd)
  * (13) => Pliers.GTJ(gy, gm, gd)
+ * (14) => Pliers.binarySearch(sortArr, target)
  *
  * */
 
@@ -188,7 +189,27 @@ class Pliers {
         let jd = 1 + ((days < 186) ? (days % 31) : ((days - 186) % 30));
         return [jy, jm, jd];
     }
+
+    //(14) => Pliers.binarySearch(sortArr, target)
+    static binarySearch(sortArr, target) {
+        //BinarySearch : O(logn)
+        let [low, high] = [0, sortArr.length - 1];
+        while (low <= high) {
+            let mid = Math.floor((low + high) / 2);
+            let guess = sortArr[mid];
+            if (guess === target) {
+                return mid;
+            }
+            if (guess < target) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+        return -1;
+    }
 }
+
 
 // ***************| Exports Code
 //Uncomment one of the following codes based on your programming environment

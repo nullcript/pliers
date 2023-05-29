@@ -45,6 +45,9 @@ Here is a list of things you can do with pliers.
     -   Jalali to Gregorian => `Pliers.JTG(1378, 1, 5) //[1999, 3, 25]`
 -   **`Pliers.GTJ(gy, gm, gd)`**
     -   Gregorian to Jalali => `Pliers.GTJ(1999, 3, 25) //[1378, 1, 5]`
+-   **`Pliers.binarySearch(sortArr, target)`**
+    -   searching via binarySearch in a sort array
+    -   if find return index otherwise -1 `O(logn)`
 
 ## How to use
 
