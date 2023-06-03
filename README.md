@@ -48,6 +48,8 @@ Here is a list of things you can do with pliers.
 -   **`Pliers.binarySearch(sortArr, target)`**
     -   searching via binarySearch in a sort array
     -   if find return index otherwise -1 `O(logn)`
+-   **`Pliers.quickSort(arr)`**
+    -   sorting via quickSort algorithm with`O(n*logn)`
 
 ## How to use
 

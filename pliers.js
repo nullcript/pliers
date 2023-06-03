@@ -32,6 +32,7 @@
  * (12) => Pliers.JTG(jy, jm, jd)
  * (13) => Pliers.GTJ(gy, gm, gd)
  * (14) => Pliers.binarySearch(sortArr, target)
+ * (15) => Pliers.quickSort(arr)
  *
  * */
 
@@ -207,6 +208,32 @@ class Pliers {
             }
         }
         return -1;
+    }
+
+    //(15) => Pliers.quickSort(arr)
+    static quickSort(arr) {
+        //QuickSort : O(n * logn) [D&C]
+        if (arr.length <= 1) {
+            return arr;
+        }
+
+        const pivot = arr[Math.floor(arr.length / 2)]; //middle pivot
+        const left = [];
+        const right = [];
+
+        for (let i = 0; i < arr.length; i++) {
+            if (i === Math.floor(arr.length / 2)) {
+                continue;
+            }
+
+            if (arr[i] < pivot) {
+                left.push(arr[i]);
+            } else if (arr[i] > pivot) {
+                right.push(arr[i]);
+            }
+        }
+
+        return [...Pliers.quickSort(left), pivot, ...Pliers.quickSort(right)];
     }
 }
 
