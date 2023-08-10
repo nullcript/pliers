@@ -1,0 +1,26 @@
+{
+  "name": "@shokri/pliers",
+  "version": "1.0.0",
+  "description": "A simple and integrated library of commonly used methods for JavaScript",
+  "main": "pliers.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nullcript/pliers.git"
+  },
+  "keywords": [
+    "pliers",
+    "pliersJs",
+    "nullcript",
+    "shokri",
+    "mohammadshokri"
+  ],
+  "author": "nullcript",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nullcript/pliers/issues"
+  },
+  "homepage": "https://github.com/nullcript/pliers#readme"
+}
