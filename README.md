@@ -53,69 +53,15 @@ Here is a list of things you can do with pliers.
 
 ## How to use
 
-[clone or download](https://github.com/nullcript/pliers) the file then
-put the file in your project depends your environment **(Node / Browser)**
-then :
-
-### Node.js
-
-```javascript
-const Pliers = require("./path/pliers.js");
-
-//for example
-let arr = [1, 2, 3, 4, 5];
-console.log(Pliers.includes(arr, 2)); // true
+install via npm :
+```bash
+npm i @shokri/pliers
 ```
-
-### Browser
-
+then import and use it :
 ```javascript
-<script src="./path/pliers.js" type="module"></script>
-```
+const Pliers = require("@shokri/pliers");
 
-```javascript
-import Pliers from "./path/pliers.js";
-
-//for example
-let arr = [1, 2, 3, 4, 5];
-console.log(Pliers.includes(arr, 2)); // true
-```
-
-### Other way
-
-If you do not want to use the modules in the browser, you can use the project as a simple script.
-
-```javascript
-<script src="./path/pliers.js" type="text/javascript"></script>
-```
-
-```javascript
-let arr = [1, 2, 3, 4, 5];
-console.log(Pliers.includes(arr, 2)); // true
-```
-
-## One note about the project file
-
-if you use **Node.js** you should use this **module.exports** code.  
-Get it from the comment
-
-```javascript
-module.exports = Pliers; //THIS
-//export defalut Pliers;
-```
-
-For use module in **Browser** you should use this **export** code.
-
-```javascript
-  //module.exports = Pliers;
-  export defalut Pliers; //THIS
-```
-
-otherwise you should comment both of them for using as a simple script.
-
-```javascript
-//module.exports = Pliers;
-//export defalut Pliers;
+console.log(Pliers.sort([0, 1, 7, 9, 6]));  //[ 0, 1, 6, 7, 9 ]
 ```
 
 ## Author
