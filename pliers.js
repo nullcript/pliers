@@ -242,5 +242,5 @@ class Pliers {
 //Uncomment one of the following codes based on your programming environment
 //Read 'README.md' file for more instruction
 
-// module.exports = Pliers;
-// export default Pliers;
+module.exports = Pliers;
+
