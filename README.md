@@ -66,7 +66,7 @@ console.log(Pliers.sort([0, 1, 7, 9, 6]));  //[ 0, 1, 6, 7, 9 ]
 
 ## Author
 
--   [@Mohammad Shokri](https://www.github.com/nullcript)
+-   [@Mohammad Shokri](https://nullcript.ir)
 
 ## 🔗 Links
 
